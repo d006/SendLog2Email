@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SendLog2Email" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="d006790721@gmail.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zzz-H5-916">
+                                <rect key="frame" x="60" y="285" width="480" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xk4-nR-A1x">
+                                <rect key="frame" x="282" y="323" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="actSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P74-uH-ezt"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Log" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wDD-Lw-s7p">
+                                <rect key="frame" x="60" y="28" width="480" height="249"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xk4-nR-A1x" firstAttribute="top" secondItem="Zzz-H5-916" secondAttribute="bottom" constant="8" id="L5O-Al-PCZ"/>
+                            <constraint firstItem="Xk4-nR-A1x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SIg-pl-w59"/>
+                            <constraint firstItem="Zzz-H5-916" firstAttribute="top" secondItem="wDD-Lw-s7p" secondAttribute="bottom" constant="8" id="beg-fE-KAI"/>
+                            <constraint firstItem="wDD-Lw-s7p" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="drD-6V-h6j"/>
+                            <constraint firstItem="Zzz-H5-916" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="l7D-Tc-G03"/>
+                            <constraint firstItem="wDD-Lw-s7p" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="r0C-ib-tMH"/>
+                            <constraint firstItem="wDD-Lw-s7p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rMH-Bi-QGT"/>
+                            <constraint firstItem="Zzz-H5-916" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="rXp-0p-ceC"/>
+                            <constraint firstItem="Zzz-H5-916" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zYG-Ub-AlP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="Zzz-H5-916" id="BQo-Hb-Hct"/>
+                        <outlet property="txtLog" destination="wDD-Lw-s7p" id="fVe-a6-kzq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="359"/>
+        </scene>
+    </scenes>
+</document>
